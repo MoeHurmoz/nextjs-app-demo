@@ -6,7 +6,7 @@ export default async function PostDetails({ id }) {
   });
 
   const endpoint = `https://jsonplaceholder.typicode.com/posts/${id}`;
-  const res = await fetch(endpoint, { cache: "no-store" });
+  const res = await fetch(endpoint);
   const post = await res.json();
 
   const styles = {
